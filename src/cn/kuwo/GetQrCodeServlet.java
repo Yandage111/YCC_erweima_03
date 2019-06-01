@@ -40,5 +40,6 @@ public class GetQrCodeServlet extends HttpServlet {
         out.print(jsonStr);
         out.flush();
         out.close();
+        //
     }
 }
