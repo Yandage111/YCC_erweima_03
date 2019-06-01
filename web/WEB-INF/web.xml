@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+        <description></description>
+        <display-name>长连接检查登录状态</display-name>
+        <servlet-name>LongConnectionCheckServlet</servlet-name>
+        <servlet-class>cn.kuwo.LongConnectionCheckServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LongConnectionCheckServlet</servlet-name>
+        <url-pattern>/LongConnectionCheckServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>获取二维码图片以及uuid</description>
+        <display-name>GetQrCodeServlet</display-name>
+        <servlet-name>GetQrCodeServlet</servlet-name>
+        <servlet-class>cn.kuwo.GetQrCodeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetQrCodeServlet</servlet-name>
+        <url-pattern>/GetQrCodeServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>手机扫描二维码之后进行登录</description>
+        <display-name>PhoneLoginServlet</display-name>
+        <servlet-name>PhoneLoginServlet</servlet-name>
+        <servlet-class>cn.kuwo.PhoneLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PhoneLoginServlet</servlet-name>
+        <url-pattern>/PhoneLoginServlet</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
